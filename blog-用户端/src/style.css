@@ -1,0 +1,45 @@
+/* style.css */
+:root {
+  /* 亮色模式变量 */
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --border-color: #f0f0f0;
+  --post-excerpt: #666666;
+  --accent-color: #ff66b2;
+}
+
+/* 当 body 带有 .dark 类时，覆盖变量 */
+.dark {
+  --bg-color: #1a1a1a;
+  /* 定义变量 */
+  --text-color: #f5f5f5;
+  --nav-bg: rgba(26, 26, 26, 0.8);
+  --border-color: #333333;
+  --post-excerpt: #bbbbbb;
+}
+
+html,
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  /* 让切换更顺滑 */
+}
+
+html.dark .markdown-preview li code,
+html.dark .markdown-preview p code {
+  color: #ff7b72 !important;
+  /* 字体变红 */
+  background-color: #2d333b;
+  /* 这里的背景色可以根据需要调整或删除 */
+}
+
+html.dark h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-color);
+}

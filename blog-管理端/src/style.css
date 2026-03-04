@@ -1,0 +1,38 @@
+/* 1. 基础重置 */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  /* 建议暂时注释掉 color-scheme，避免与 AntD 主题冲突 */
+  /* color-scheme: light dark; */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 2. 彻底移除原有的 flex 居中 */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  /* 确保背景色统一，防止出现白边 */
+  background-color: #f0f2f5;
+}
+
+/* 3. 修改 #app 容器 */
+#app {
+  height: 100%;
+  width: 100%;
+  /* 必须移除这里的 padding 和 text-align: center */
+  padding: 0;
+  margin: 0;
+}
+
+/* 保持 a 标签和按钮的样式，但确保它们不会干扰布局 */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
